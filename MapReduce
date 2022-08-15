@@ -1,0 +1,9 @@
+MapReduce is a programming framework for processing and generating big datasets with a parallel, distributed algorithm on a cluster. 
+  1. Map function takes in data and outputs a {key, value} pair.
+  2. Reduce takes a key and a set of values, reducing the values into a single one. Then outputs a new {key, value} pair.
+  
+  The detailed pipeline is:
+  1. Splitting data into multiple machines;
+  2. Each machine performs map independently;
+  3. A shuffle operation reorganized the data so that all {key, value} pairs from Map go to the same Reduce machine;
+  4. Reduce is performed to consolidate results
