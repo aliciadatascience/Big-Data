@@ -1,0 +1,4 @@
+to exit the Scala Spark Shell
+        type ":q"
+to exit Python Spark Shell
+        type "ctrl + Z" 或者quit()
