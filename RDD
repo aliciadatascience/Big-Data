@@ -1,0 +1,53 @@
+RDD: Resilient Distributed Datasets
+Characters:
+        1. immutable
+        2. fault tolerant
+        3. parallel data structures
+        4. in-memory computing
+        5. data partitioning and placement
+
+RDD operations: transformations and actions
+        Transformation is lazily evaluated, meanning Spark will delay the evaluatio of the invoked operations until an action is taken. The returned value will be another RDD due to the immutable property.
+        Actions are eagerly evaluated.
+
+Creating RDD:
+        The first way to create an RDD is to parallelize an object collection by calling the "parallelize" method of the "SparkContext" CLASS.
+                val stringList = Array("Spark is awesome","Spark is cool")
+                val stringRDD = spark.sparkContext.parallelize(stringList)
+        The second way to creat an RDD is to read a dataset from a storage system.
+                val fileRDD = spark.sparkContext.textFile("/tmp/data.txt")
+        The third way to create an RDD is by invoking one of the transformation operations
+
+RDD operations:
+            Map
+                # convert all the strings to Uppercase
+                val stringList = Array("Spark is awesome","Spark is cool")
+                val stringRDD = spark.sparkContext.parallelize(stringList)
+                val allCapsRDD = stringRDD.map(line => line.toUpperCase)
+                allCapsRDD.collect().foreach(println)
+                
+                # if the transformation logic is complex and requires calling other API. It's best to define a function to encapsulate that complexity.
+                def toUpperCase(line: String):
+                        String = {line.toUpperCase}
+                stringRDD.map(l => toUpperCase(l)).collect.foreach(pringln)
+                
+                # use map transformation to convert Text data into Scala Contact Objects
+                case class Contact(id:Long, name:String, email:String)
+                val contactData = Array("1#Joe Purdy#jpurdy@domain.com", "2#Joceyln Chin#jchin@domain.com")
+                val contactDataRDD = spark.sparkContext.parallelize(contactData)
+                ??? val contactRDD = contactDataRDD.map(l => { 
+                                                val contactArray = l.split("#") 
+                                                Contact(contactArray(0).toLong, contactArray(1), contactArray(2))
+                                                })
+                contactRDD.collect.foreach(println)
+                
+                # the inuput and output type do not have to the same.
+                val stringLenRDD = stringRDD.map(l => l.length)
+                stringLenRDD.collect.foreach(println)
+         flatMap
+                # transform lines into words
+                val wordRDD = stringRDD.flatMap(line => line.split(" ")
+                wordRDD.collect().foreach(println)
+         filter
+                val awesomeLineRDD = stringRDD.filter(line => line.contains("awesome"))
+                awesomeLineRDD.collect
