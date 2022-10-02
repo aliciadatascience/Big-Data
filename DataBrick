@@ -1,0 +1,7 @@
+Data-driven decision-making has become the key to all business decisions in companies. Companies use Data Analysis and Big Data to make these decisions. Large volumes of data flow from different source systems to the Data Warehouse or any Analytics tool to get insights from it. 
+
+Databricks is built on top of distributed Cloud computing environments like Azure, AWS, or Google Cloud. Databricks platform is said to be 100 times faster than Apache Spark. It comes with inbuilt data visualization tools. 
+
+Databricks is basically a Cloud-based Data Engineering tool that is widely used by companies to process and transform large quantities of data and explore the data. This is used to process and transform extensive amounts of data and explore it through Machine Learning models. It allows organizations to quickly achieve the full potential of combining their data, ETL processes, and Machine Learning. 
+
+Databricks, developed by the creators of Apache Spark is a one-stop product for all Data requirements, like Storage and Analysis. It can derive insights using SparkSQL, provide active connections to visualization tools such as Power BI, Qlikview, and Tableau, and build Predictive Models using SparkML. Databricks is integrated with Microsoft Azure, Amazon Web Services, and Google Cloud Platform
