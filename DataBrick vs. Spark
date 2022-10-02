@@ -1,0 +1,13 @@
+Spark is the most well-known and popular open source framework for data analytics and data processing. 
+Databricks is a company founded by the authors of Apache Spark. It offers a platform for data analytics called Databricks. It’s a commercial product, but it has a free community edition with many features.
+
+Databricks is a cloud-based analytics service that provides a lot of advanced features to build, run and manage your Apache Spark clusters. Databricks makes use of its own cloud infrastructure, which is based on Apache YARN (Yet Another Resource Negotiator) and Apache Mesos.
+
+Spark is a cluster computing system, provides an interface similar to MapReduce, but allows for more complex operations like queries and iterative algorithms.
+Databricks is a tool that is built on top of Spark. It allows users to develop, run and share Spark-based applications. 
+
+Spark is a powerful tool that can be used to analyze and manipulate data. 
+Databricks can be used to create a cluster, to run jobs and to create notebooks. It can be used to share datasets and it can be integrated with other tools and technologies.
+
+Spark is able to work with any flat data source. This means that data can be stored in files, in NoSQL databases, or in Hadoop. 
+Databricks, on the other hand, is designed to work with data that has already been processed in Hadoop. Databricks can also connect directly to a variety of other data sources, including RDBMS and HBase, to retrieve data.
