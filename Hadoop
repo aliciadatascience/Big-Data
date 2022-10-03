@@ -1,1 +1,3 @@
 Hadoop is a file distributed system, which will not process the data but just try to store the data.
+
+Hadoop has two core components: HDFS(Hadoop Distributed File System) and YARN(Yet Another Resource Negotiator). HDFS is Hadoop's storage subsystem, whereas YARN can be thought of as Hadoop's processing, or resource scheduling, subsystem.
