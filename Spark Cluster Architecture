@@ -1,4 +1,5 @@
 The components of a Spark application are the Driver, the cluster Manager/Master, and Worker/the Executor, which run on worker nodes.
+Spark architecture consists of 4 components, including the spark driver, executors, cluster adminstrators, and worker nodes.
 
 Spark architecture
 Whenever you try to submit a job into a spark, the first point of context for any program which has been lauched from your client system will be a driver program. Inside the driver program, there will be a SparkContext, which is the first point of executing of any program. This SparkContext will try to interact with your cluster manager. As a Cluster manager, you could use YARN or Mesos or Spark Standalone. SparkContext will try to get other sources from a cluster manager and then after getting a resources after getting a confirmation from the cluster manager that, I have enough amount of resources to execute this particular job, it will try to launch an executor inside a worker node. An executor is CPU or memory. Inside the executor it will keep on executing a task in a distributed mode if you are using a Hadoop cluster. If you are trying to execute your job into a standalone again, it will try to create a same kind of executor but not in a distributed mode.
@@ -7,3 +8,9 @@ What's SparkContext?
 When a programmer creates a RDD, SparkContext will be the first point of contact to a Spark cluster.  In each and every time  it is going to create a new SparkContext when you will try to submit a job.
 SparkContext is an entity which is going to tell a spark how to access a cluster. For exmaple, SparkContext was communicating with our cluster manager, which could be YARN/Mesos/Standalone. So SparkContext always try to communicte with your cluster manager, it try to get your recouses, submit your job, execute job inside a executor by getting a resources from a cluster manager. 
 Inside the SparkContext, you can configure your spark properties with the help of a spark configuration. Spark configuration is a key factor to create our programmer application.
+
+Spark Architectur is a framework-based component that processes a large amount of unstructured, semi-structured, and structured data for analytics. The RDD and DAG(directed acyclic graph) are utilized to store and process data, respectively. Spark architecture consists of 4 components, including the spark driver, executors, cluster adminstrators, and worker nodes.
+
+The spark architecture consists of two main abstraction layers:
+- RDD
+- DAG: The driver converts the program into a DAG for each job. 
