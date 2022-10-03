@@ -1,0 +1,7 @@
+The problem with MapReduce is disk-based computation engineer. That is to say whenever you try to lauch a iterative job/processing, it will try to read data for each iterative job from hard disk, and then after each and every step it will try to write back your data into a hard disk, which basically will be a HDFS system. In this way, it will utilize a lot of I/O bandwidth and it will consume CPU.
+
+Spark is in-memory processing framework.  While you are processing a data into a spark, it will try to keep your data and intermediate data which is supposed to provide to a next job into memory instead of keeping this data into a hard disk.
+
+Spark also have in-built SparkSQL libraries, machine learning libraries, streaming API and graphics.
+
+(MapReduce is a batch processing framework and Spark is a real-time or near real-time processing framework.)
