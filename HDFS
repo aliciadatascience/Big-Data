@@ -1,0 +1,8 @@
+Haddop stores data in HDFS.
+
+HDFS has a master-slave architecture. The master node is the NameNode, which manages over multiple slave notdes, known as DataNodes.
+
+    - DataNodes
+        DataNodes store actual physical data in the form of chunks in the blocks assigned by the NameNode. The default setting ensure each data block has three replicas.
+    - NameNode
+        Namenode keeps the information of blocks like number of blocks, their replicas, and other details. 
