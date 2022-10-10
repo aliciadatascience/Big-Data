@@ -1,3 +1,8 @@
 Hadoop is a file distributed system, which will not process the data but just try to store the data.
 
-Hadoop has two core components: HDFS(Hadoop Distributed File System) and YARN(Yet Another Resource Negotiator). HDFS is Hadoop's storage subsystem, whereas YARN can be thought of as Hadoop's processing, or resource scheduling, subsystem.
+Hadoop has two core components: 
+        1)HDFS(Hadoop Distributed File System): HDFS is Hadoop's storage subsystem
+        2)YARN(Yet Another Resource Negotiator): YARN can be thought of as Hadoop's processing, or resource scheduling, subsystem.
+
+YARN is a resource management framework provided by Hadoop, which means that YARN allows you to schedule and manage workloads on a Hadoop cluster.
+There are 2 depolyment modes when using YARN as a sheduler: cluster and client.
